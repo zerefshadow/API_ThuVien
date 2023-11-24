@@ -63,7 +63,10 @@ public class MuonTraController {
     public List<MuontraDTO> getMuontraInfo2() {
         return muontraRepository.getMuontraInfo2();
     }
-    
+    @GetMapping("/info2/{id}")
+    public MuontraDTO getMuontraInfoByID(@PathVariable Integer id){
+    	return muontraRepository.getMuontraByIdAndTinhtrangmuon(id);
+    }
     @GetMapping("/dg")
     public List<Object[]> getMuontraIa() {
         return muontraRepository.getMuontraAndDocgia();
