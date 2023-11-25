@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.API_ThuVien.model.Chitietmuontra;
 import com.example.API_ThuVien.repository.ChiTietMuonTraRepository;
 import com.example.API_ThuVien.repository.ChiTietPhatRepository;
-import com.example.API_ThuVien.model.Chitietpphat;
+import com.example.API_ThuVien.model.Chitietphat;
 
 @RestController
 @RequestMapping("/chitietphat")
@@ -22,12 +22,12 @@ public class ChiTietPhatContoller {
 	
 	// Tạo một chi tiết mượn trả mới
     @PostMapping("")
-    public Chitietpphat createChitietmuontra(@RequestBody Chitietpphat chitietphat ) {
+    public Chitietphat createChitietmuontra(@RequestBody Chitietphat chitietphat ) {
         return chitietphatRepository.save(chitietphat);
     }
 	
 	@GetMapping("")
-    public List<Chitietpphat> getAllChitietmuontra() {
+    public List<Chitietphat> getAllChitietmuontra() {
         return chitietphatRepository.findAll();
     }
 }
