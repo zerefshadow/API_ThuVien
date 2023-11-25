@@ -21,5 +21,5 @@ public class Chitietphat {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_ctphat;
 	private Integer id_banggia;
-	private String id_vipham;
+	private Integer id_vipham;
 }
