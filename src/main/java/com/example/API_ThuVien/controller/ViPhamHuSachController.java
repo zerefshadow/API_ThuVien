@@ -50,4 +50,14 @@ public class ViPhamHuSachController {
             throw new RuntimeException("Vi phạm hư sách không tồn tại với ID " + id);
         }
     }
+    
+    @PutMapping("/{id}/tongtien") // Sử dụng phương thức PUT để cập nhật tongtien
+    public Viphamhusach updateTongtien(@PathVariable Integer id, @RequestParam("tongtien") int newTongtien) {
+        Viphamhusach viphamhusach = viphamhusachRepository.findById(id).orElse(null);
+        if (viphamhusach != null) {
+            viphamhusach.setTongtien(newTongtien);	
+            return viphamhusachRepository.save(viphamhusach); // Lưu lại thay đổi
+        }
+        return null; // Trả về null nếu không tìm thấy viphamhusach với id tương ứng
+    }
 }
