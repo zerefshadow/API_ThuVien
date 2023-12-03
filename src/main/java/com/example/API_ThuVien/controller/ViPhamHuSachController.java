@@ -51,7 +51,7 @@ public class ViPhamHuSachController {
         }
     }
     
-    @PutMapping("/{id}/tongtien") // Sử dụng phương thức PUT để cập nhật tongtien
+    @PutMapping("/{id}/tongtien")
     public Viphamhusach updateTongtien(@PathVariable Integer id, @RequestParam("tongtien") int newTongtien) {
         Viphamhusach viphamhusach = viphamhusachRepository.findById(id).orElse(null);
         if (viphamhusach != null) {

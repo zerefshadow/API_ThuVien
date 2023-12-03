@@ -25,7 +25,7 @@ public class Tailieu {
 	private int id_nxb;
 	private int id_loai;
 	private String tentailieu;
-	private Integer soluong;
+	private int soluong;
 	private int namsanxuat;
 	private String tacgia;
 	private String hinh;
