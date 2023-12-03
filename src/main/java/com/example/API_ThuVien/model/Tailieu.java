@@ -22,15 +22,15 @@ public class Tailieu {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_tailieu;
-	private int id_nxb;
-	private int id_loai;
+	private Integer id_nxb;
+	private Integer id_loai;
 	private String tentailieu;
-	private int soluong;
-	private int namsanxuat;
+	private Integer soluong;
+	private Integer namsanxuat;
 	private String tacgia;
 	private String hinh;
 	private String mota;
 	private String ngonngu;
-	private int sotrang;
+	private Integer sotrang;
 	
 }
